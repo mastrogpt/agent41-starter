@@ -1,0 +1,29 @@
+---
+description: when you need to create an action, a tool, a prompt or a resource
+globs: 
+alwaysApply: false
+---
+When asked to create a new action, ask or deduct the <name> and optionally the <package> (assume <package> = <name> if not specified) then use:
+
+  ops ai new <function> [<package>]
+
+It will create the files:
+
+- packages/<package>/<function>/__main__.py
+- packages/<package>/<function>/<function>.py
+- tests/<package>/test_<function>.py
+- tests/<package>/test_<function>_int.py
+
+When requested to create a tool, a resource or a prompt  ask or deduct the <name> and optionally the <package> (assume <package> = <name> if not specified). 
+
+Then use:
+
+  ops a41 new <package> <description> (--prompt=<name>|--tool=<name>|--resource=<name>)
+
+It will generate the files:
+
+- packages/<package>/<name>/__main__.py
+- packages/<package>/<name>/<name>.py
+- tests/<package>/test_<name>.py
+
+
