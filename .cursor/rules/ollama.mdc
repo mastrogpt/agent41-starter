@@ -1,12 +1,18 @@
-To use ollama, add in the `__main__.py`  the secrets:
+---
+description: when required to use ollama
+globs: 
+alwaysApply: false
+---
+To use ollama, add in  `__main__.py` the metadata to retrive the secrets:
 
-#-p OLLAMA_HOST "$OLLAMA_HOST" 
-#-p AUTH "$AUTH" 
+#-p OLLAMA_HOST "$OLLAMA_HOST"
+#-p AUTH "$AUTH"
 
-Never add code directly to `__main__.py`, just the metadata, provide the implemention code in the invoked function.
+When you need to access Ollama, retrieve the secrets from args and build the url f"https://{AUTH}@{OLLAMA_HOST}".
 
-Assume the values of the metadata are availabie in the args and in the env (for test) and retrieve the secrets with
+Use requests and the url to invoke the Ollama API.
 
-<SECRET> = args.get("<SECRET>", os.getenv("<SECRET>")
+By default add stream=false to API requests.
 
-In the invoked function assess to Ollama building an URL  f"https://{auth}@{ollama_host}"
+
+
