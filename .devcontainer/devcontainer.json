@@ -1,5 +1,5 @@
 {
-	"name": "MastroGPT",
+	"name": "Agent41",
 	"dockerComposeFile": ["docker-compose.yml"],
 	"service": "app",
 	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",

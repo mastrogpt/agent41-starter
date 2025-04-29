@@ -1,6 +1,6 @@
 services:
     app:
-      image: sciabarracom/agent41-starter:2504190002
+      image: mastrogpt/agent41-starter:2504291600
       volumes:
         - ../..:/workspaces:cached
       depends_on:
