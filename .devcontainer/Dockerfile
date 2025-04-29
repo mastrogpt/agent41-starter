@@ -1,5 +1,4 @@
 FROM node:22
-ARG OPS_VERSION=v0.1.0-2501041342.dev
 # Install basic development tools
 RUN \
      apt update && \
@@ -14,10 +13,11 @@ RUN \
 # install ops and plugins
 USER node
 RUN \
-    curl -sL https://bit.ly/get-ops | VERSION=${OPS_VERSION} bash
+    curl -sL https://bit.ly/get-ops | bash
 ENV PATH="/home/node/.local/bin:${PATH}"
 RUN \
     ops -update
 RUN \
     ops -plugin https://github.com/mastrogpt/olaris-ai ;\
-    ops ai
+    ops -plugin https://github.com/mastrogpt/olaris-a41 ;\
+    ops ai ; ops 41

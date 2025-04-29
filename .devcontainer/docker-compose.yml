@@ -1,6 +1,6 @@
 services:
     app:
-      image: mastrogpt/agent41-starter:2504291600
+      image: mastrogpt/agent41-starter:2504291700
       volumes:
         - ../..:/workspaces:cached
       depends_on:
