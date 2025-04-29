@@ -2,7 +2,7 @@
 cd "$(dirname $0)"
 set -a
 source .env
-TAG=$(grep 'image: mastrogpt/agent41-starter' docker-compose.yml | awk -F: '{print $3}')
+TAG=$(grep 'mastrogpt/agent41-starter' docker-compose.yml | awk -F: '{print $3}')
 LATEST=https://api.github.com/repos/apache/openserverless-cli/releases/latest
 OPS_VERSION=$(curl -s "$LATEST" | jq -r '.name | .[1:]')
 DH_USER=sciabarracom
