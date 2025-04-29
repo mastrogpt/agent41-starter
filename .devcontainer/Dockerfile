@@ -21,3 +21,5 @@ RUN \
     ops -plugin https://github.com/mastrogpt/olaris-ai ;\
     ops -plugin https://github.com/mastrogpt/olaris-a41 ;\
     ops ai ; ops a41
+
+CMD ["sleep", "infinity"]
