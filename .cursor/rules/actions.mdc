@@ -1,10 +1,10 @@
 ---
-description: 
-globs: packages/
+description: when implementing a tool or an action
+globs: 
 alwaysApply: false
 ---
-Implement the function assuming the input is a dict and the result must also be a json serializable dict.
+Implement any action or tool assuming the input is a dict and the result must also be a json serializable dict.
 
-Assume the  the main input is in the field `input` and produce the output in the field `output` as a string.
+Assume the  the main input is in the field `input` as a string and produce the output in the field `output` as a string.
 
 You can add additional fields as additional and complex results. Produce a complex output creating an `html` field in html format.
