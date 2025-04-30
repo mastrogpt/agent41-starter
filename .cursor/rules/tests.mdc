@@ -3,7 +3,7 @@ description:
 globs: tests/**/test_*.py
 alwaysApply: false
 ---
-When you need to a <module> of <tool> in <package> , access the modules with:
+When you need  to test a <module> of <tool> in <package> , access the modules with:
 
 ```
 import sys
