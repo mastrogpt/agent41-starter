@@ -1,0 +1,22 @@
+---
+description: 
+globs: tests/**/test_*.py
+alwaysApply: false
+---
+When you need to a <module> of <tool> in <package> , access the modules with:
+
+```
+import sys
+sys.path.append("packages/<package>/<tool>")
+import <module>
+```
+
+Do not add mocks.
+
+Assume you can access relevant services (redis, postgres, milvus, s3) using environment variables that are provided.
+
+Test the <function>s and <class>ess in the <module> referring to them as
+
+<module>.<function> or <module>.<class>
+
+
