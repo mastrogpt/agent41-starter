@@ -14,9 +14,5 @@
    {
     "name": "Redis",
     "url": "mastrogpt/cache"
-   },
-   {
-    "name": "Weather",
-    "url": "weather/weather"
    }
 ]
