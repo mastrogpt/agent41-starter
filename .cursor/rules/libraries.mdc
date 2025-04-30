@@ -1,10 +1,8 @@
 ---
 description: 
-globs: packages/*/*.py
+globs: packages/**/*.py
 alwaysApply: false
 ---
-# Libraries
-
 Do not add a requirements.txt.
 Do not use pip to install other libraries.
 
