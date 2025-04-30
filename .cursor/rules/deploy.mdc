@@ -1,0 +1,12 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+Once you finished the implementation, deploy the tool or actions.
+
+You need a $HOME/.wskprops file to deploy a tool. If it is not there execute `ops ide login` and ask the user to provide the credentials.
+
+You can then deploy a <tool> executing `ops ide deploy <package>/<tool>`
+
+

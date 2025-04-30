@@ -17,4 +17,3 @@ Use only Postgres as Relational Database, do not use sqlite. Use Milvus as Vecto
 Assume you have already available the library `requests` for REST apis, `redis` for redis, `psycopg` for postgres, `boto3` for s3,  `pymilvus` for Miluvs, and `openai` for AI requests. 
 
 Do not try to add other libraries with `pip` or a `requirements.txt`
-

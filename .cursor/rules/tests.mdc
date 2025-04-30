@@ -11,9 +11,7 @@ sys.path.append("packages/<package>/<tool>")
 import <module>
 ```
 
-You need a $HOME/.wskprops file to execute the tests. If it is not there execute `ops ide login` and ask the user to provide the credentials.
-
-Do not add mocks or stubs.
+Do not use mocks or stubs, use the actual services in preferences. Ask the user to provide the secrets adding them to `.env`.
 
 Assume you can access relevant services (redis, postgres, milvus, s3) using environment variables that are provided.
 
