@@ -3,6 +3,8 @@ description:
 globs: tests/**/test_*.py
 alwaysApply: false
 ---
+Before running tests execute `ops ide login` and ask user to provide the credentials.
+
 When you need  to test a <module> of <tool> in <package> , access the modules with:
 
 ```
