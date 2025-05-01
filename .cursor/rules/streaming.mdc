@@ -1,0 +1,26 @@
+---
+description: when you are requested to stream with ollama
+globs: 
+alwaysApply: false
+---
+- return streaming: true in the result dict
+- set stream: true in messages, and do a request with stream=true
+- read the result with res.iter_lines() and invoke the stream function:
+
+```
+import json, socket, traceback
+def stream(args, lines):
+  sock = args.get("STREAM_HOST") ; port = int(args.get("STREAM_PORT"))
+  out = ""
+  with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+    s.connect((sock, port))
+    try:
+      for line in lines:
+        msg = {"output": line}
+        s.sendall(json.dumps(msg).encode("utf-8"))
+        out += str(line) #; print(line, end='')
+    except Exception as e:
+      traceback.print_exc(e)
+      out = str(e)
+  return out
+  ```
