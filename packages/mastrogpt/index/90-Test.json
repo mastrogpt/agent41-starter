@@ -14,5 +14,9 @@
    {
     "name": "Redis",
     "url": "mastrogpt/cache"
+   },
+   {
+    "name": "TextReverser",
+    "url": "text_tools/text_reverser"
    }
 ]
