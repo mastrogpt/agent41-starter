@@ -16,7 +16,7 @@
     "url": "mastrogpt/cache"
    },
    {
-    "name": "TextReverser",
-    "url": "text_tools/text_reverser"
+    "name": "Text Processor",
+    "url": "demo/demo"
    }
 ]
