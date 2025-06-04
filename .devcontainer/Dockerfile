@@ -5,7 +5,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 # Install build dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
     git curl sbcl make unzip ca-certificates \
-    libsqlite3-dev libssl-dev gawk freetds-dev jq \
+    libsqlite3-dev libssl-dev gawk freetds-dev jq default-jre \
  && rm -rf /var/lib/apt/lists/*
 
 # Clone pgloader and build it
