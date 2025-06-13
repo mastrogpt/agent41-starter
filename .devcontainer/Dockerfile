@@ -41,6 +41,11 @@ RUN \
     echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME \
     && chmod 0440 /etc/sudoers.d/$USERNAME
 
+ENV TINI_VERSION=v0.19.0
+ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /tini
+RUN chmod +x /tini
+ENTRYPOINT ["/tini", "--"]
+
 # install ops and plugins
 USER node
 RUN \
@@ -53,4 +58,6 @@ RUN \
     ops -plugin https://github.com/mastrogpt/olaris-a41 ;\
     ops ai ; ops a41
 
+
 CMD ["sleep", "infinity"]
+
