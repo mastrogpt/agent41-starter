@@ -58,5 +58,11 @@ RUN \
     ops -plugin https://github.com/mastrogpt/olaris-a41 ;\
     ops ai ; ops a41
 
+WORKDIR /home/node
+RUN \
+    curl -sL "https://raw.githubusercontent.com/rupa/z/master/z.sh" -o ".z.sh" ;\
+    curl -sL https://raw.githubusercontent.com/sciabarracom/openserverless/refs/heads/main/bash_aliases -o ".bash_aliases" ;\
+    echo 'source $HOME/.z.sh' >> .bashrc
+
 CMD ["sleep", "infinity"]
 
